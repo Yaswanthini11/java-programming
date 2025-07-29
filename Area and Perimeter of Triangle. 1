@@ -7,6 +7,15 @@ import java.util.regex.*;
 public class Solution {
 
     public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-    }
-}
+        Scanner sc=new Scanner(System.in);
+        int h=sc.nextInt();
+        int b=sc.nextInt();
+        int a=sc.nextInt();
+        int d=sc.nextInt();
+        int c=sc.nextInt();
+        float area=(float)1/2*h*b;
+        float peri=a+d+c;
+        System.out.printf("Area of Triangle is %.2f\n",area);
+        System.out.printf("Perimeter of Triangle is %.2f",peri);
+         }
+}   
