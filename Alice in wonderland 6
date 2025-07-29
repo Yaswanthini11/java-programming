@@ -7,6 +7,12 @@ import java.util.regex.*;
 public class Solution {
 
     public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+       Scanner sc=new Scanner (System.in);
+        int num=sc.nextInt();
+        System.out.println("Bird said:"+num);
+        int sum=(num/10)+(num%10);
+        System.out.println("Alice must go in path-"+sum);
+        
+        
     }
 }
