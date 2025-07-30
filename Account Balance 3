@@ -10,24 +10,26 @@ public class Solution {
        Scanner sc=new Scanner(System.in);
        int bal=sc.nextInt();
        int in=sc.nextInt();
-     if(in==1){
-          int dep=sc.nextInt();
-          bal+=dep;
-         System.out.println(bal);
-     }
-    else if(in==2){
-        int wd=sc.nextInt();
-        
-        if(wd>bal){
-           System.out.println("Insufficient Balance");
-        }
-        else{
-            bal-=wd;
-            System.out.println(bal);
-        }
-    }
-    else{
-        System.out.println("Invalid Input");
-    }
+       switch(in){
+           case 1:
+               int dep=sc.nextInt();
+               bal+=dep;
+               System.out.println(bal);
+               break;
+           case 2:
+               int wd=sc.nextInt();
+              
+               if(wd>bal){
+                System.out.println("Insufficient Balance");
+              }
+              else{
+                   bal-=wd;  
+                 System.out.println(bal);
+              }
+               break;
+           default:
+              System.out.println("Invalid Input");
+       }
+    
     }
 }
