@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner (System.in);
+        int sal=sc.nextInt();
+        if(sal<15000){
+            float hra=(float)0.15*sal;
+            float da=(float)0.90*sal;
+            float gross_sal=sal+hra+da;
+            System.out.printf("%.2f",gross_sal);
+        }
+        else{
+            int hra=5000;
+            float da=(float)0.90*sal;
+            float  gross_sal=sal+hra+da;
+            System.out.printf("%.2f",gross_sal);
+        }
+        
+    }
+}
