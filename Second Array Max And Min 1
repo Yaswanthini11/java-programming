@@ -1,0 +1,47 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Input array size
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+      
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        
+        int maxEven = Integer.MIN_VALUE, max2Even = Integer.MIN_VALUE;
+        
+        int minOdd = Integer.MAX_VALUE, min2Odd = Integer.MAX_VALUE;
+        
+        for (int i = 0; i < n; i++) {
+            if (i % 2 == 0) {  
+                if (arr[i] > maxEven) {
+                    max2Even = maxEven;
+                    maxEven = arr[i];
+                } else if (arr[i] > max2Even && arr[i] != maxEven) {
+                    max2Even = arr[i];
+                }
+                
+            } else {  
+                if (arr[i] < minOdd) {
+                    min2Odd = minOdd;
+                    minOdd = arr[i];
+                } else if (arr[i] < min2Odd && arr[i] != minOdd) {
+                    min2Odd = arr[i];
+                }
+            }
+        }
+
+       if (max2Even != Integer.MIN_VALUE && min2Odd != Integer.MAX_VALUE) {
+            int sum = max2Even + min2Odd;
+            System.out.println("Sum="+sum);
+        } else {
+            System.out.println("No valid second largest or second smallest found");
+        }
+    }
+}
