@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       int n=sc.nextInt();
+        int a=count(n);
+       System.out.println("The Count the digits: "+a);
+   }
+ public static int count(int n){
+      if(n<10)
+             return 1;
+    return 1+count(n/10);
+      }
+}import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       int n=sc.nextInt();
+        int a=count(n);
+       System.out.println("The Count the digits: "+a);
+   }
+ public static int count(int n){
+      if(n<10)
+             return 1;
+    return 1+count(n/10);
+      }
+}
